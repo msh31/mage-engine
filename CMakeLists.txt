@@ -24,3 +24,7 @@ target_include_directories(mage-engine PUBLIC
 
 # public because games made with mage needd to access sme raylib stuff like vector2 n what not
 target_link_libraries(mage-engine PUBLIC raylib) # remember: add sentinel when ac works starts (lol)
+
+# example test
+add_executable(basic examples/basic.cpp)
+target_link_libraries(basic PRIVATE mage-engine)
