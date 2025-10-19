@@ -24,6 +24,14 @@ cd mage-engine
 cmake -S . -B build
 cmake --build build
 ```
+##### Linux
+
+### Ubuntu/Debian
+```bash
+sudo apt install libx11-dev libxrandr-dev libxinerama-dev \
+                 libxcursor-dev libxi-dev libgl1-mesa-dev \
+                 libglu1-mesa-dev cmake build-essential
+```
 
 ## Usage
 TBD
