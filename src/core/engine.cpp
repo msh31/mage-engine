@@ -18,6 +18,7 @@ namespace mage {
 
     void Engine::init() {
         InitWindow(m_width, m_height, m_title.c_str());
+        /*ToggleBorderlessWindowed();*/
         SetTargetFPS(m_maxFPS); 
         m_running = true;
     }
@@ -40,9 +41,15 @@ namespace mage {
 
     void Engine::render() {
         BeginDrawing();
+        //TODO: add to config
         ClearBackground(RAYWHITE);
         DrawText("MAGE ENGINE", 10, 10, 40, BLACK);
         DrawFPS(10, 50);
+
+        std::string text = "Monitor Index: " + std::to_string(GetCurrentMonitor());
+        DrawText(text.c_str(), 10, 100, 40, BLACK);
+
+        
         EndDrawing();
     }
 
