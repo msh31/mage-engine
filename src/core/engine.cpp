@@ -7,6 +7,7 @@ namespace mage {
         , m_title(title)
         , m_running(false)
         , m_deltaTime(0.0f)
+        , m_maxFPS(0)
     {
         // initializer list does the work
     }
@@ -17,7 +18,7 @@ namespace mage {
 
     void Engine::init() {
         InitWindow(m_width, m_height, m_title.c_str());
-        SetTargetFPS(120); //temp
+        SetTargetFPS(m_maxFPS); 
         m_running = true;
     }
 

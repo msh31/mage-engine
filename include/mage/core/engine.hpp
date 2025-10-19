@@ -26,6 +26,7 @@ namespace mage {
 
             int m_width;
             int m_height;
+            int m_maxFPS;
             std::string m_title;
             bool m_running;
             float m_deltaTime;
